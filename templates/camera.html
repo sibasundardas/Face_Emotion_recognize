@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Detection - Camera</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Camera Screen -->
+        <div id="camera-screen" class="screen">
+            <h2>Detecting Emotions...</h2>
+            <div class="video-container">
+                <img id="video" src="{{ url_for('video_feed') }}" alt="Emotion Detection Video Feed">
+            </div>
+            <button id="quit" class="btn quit-btn">Quit</button>
+        </div>
+    </div>
+
+    <!-- Link to the Camera JavaScript -->
+    <script src="{{ url_for('static', filename='camera.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Home Screen -->
+        <div id="home-screen" class="screen active-screen">
+            <h1>Emotion Detection</h1>
+            <button id="start-detect" class="btn" onclick="location.href='{{ url_for('camera') }}'">Start Detection</button>
+            <button id="exit-app" class="btn exit-btn">Exit App</button>
+        </div>
+    </div>
+
+    <!-- Link to the Home JavaScript -->
+    <script src="{{ url_for('static', filename='home.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #00B4DB, #0083B0);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container Styling */
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.05);
+}
+
+/* Heading Styling */
+h1, h2 {
+    color: #333;
+    font-weight: bold;
+}
+
+/* Button Styling */
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    margin: 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.4s, transform 0.3s ease;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    perspective: 1000px;
+    position: relative;
+}
+
+.btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease;
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+.btn:hover:before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.btn:hover {
+    background-color: #45a049;
+    transform: translateY(-5px);
+}
+
+.exit-btn {
+    background-color: #f44336;
+}
+
+.exit-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Video Container */
+.video-container img {
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* 3D Animation for Container */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
